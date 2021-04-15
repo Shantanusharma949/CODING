@@ -1,0 +1,49 @@
+Q):-                 EXAMPLE 1
+1 2 3
+4 5 6
+9 8 9  
+The left-to-right diagonal1+5+9 =15 . The right to left diagonal 3+5+9=17 . Their absolute difference is|15-17|=2 .
+
+
+                          EXAMPLE 2
+
+Sample Input
+
+3
+11 2 4
+4 5 6
+10 8 -12
+
+Sample Output
+
+15
+
+
+
+
+
+
+SOLUTION:-
+
+def left_right(f,x):
+    su=0
+    for i in range(x):
+        su=su+f[i][i]
+    return su
+def right_left(f,x):
+    st=0
+    j=x-1
+    for i in range(x):
+        st=st+f[i][j]
+        j=j-1
+    return st
+    
+x=int(input())
+f=[]
+for i in range(x):
+    row=list(map(int,input().split()))
+    f.append(row)
+s=left_right(f,x)
+sa=right_left(f,x)
+z=abs(sa-s)
+print(z)
