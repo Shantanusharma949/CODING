@@ -1,0 +1,7 @@
+import re
+f=open("test abc.txt","r")
+print(f.read())
+
+this
+This
+THIS
