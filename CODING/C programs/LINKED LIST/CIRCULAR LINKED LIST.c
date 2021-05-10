@@ -36,6 +36,22 @@ void display()
         temp=temp->link;
     }
 }
+//TO CHECK IT IS A CIRCULAR LINKED LIST OR NOT//
+void display11()
+{
+    int c=1;
+    temp=head;
+    printf("Circular Linked List is: %d\n",temp->data);
+    temp=temp->link;
+    while(c!=0)
+    {
+        if(temp==head)
+            c=0;
+        printf("%d\n",temp->data);
+        temp=temp->link;
+
+    }
+}
 
 void main()
 {
@@ -47,4 +63,5 @@ void main()
     create(22);
 
     display();
+    display11();
 }
